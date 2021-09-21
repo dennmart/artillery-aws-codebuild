@@ -25,4 +25,4 @@ phases:
       - npm install -g artillery@latest artillery-pro@latest
   build:
     commands:
-      - artillery run-test --cluster artillery-pro-cluster --region ap-northeast-1 --count 5
+      - artillery run-test --cluster artillery-pro-cluster --region ap-northeast-1 --count 5 tests/performance/socket-io.yml
