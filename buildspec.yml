@@ -7,3 +7,8 @@ phases:
   build:
     commands:
       - artillery run tests/performance/socket-io.yml
+
+artifacts:
+  files:
+    - 'reports/*'
+  name: reports/$CODEBUILD_BUILD_NUMBER
