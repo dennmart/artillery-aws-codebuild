@@ -17,4 +17,4 @@ phases:
 artifacts:
   files:
     - 'reports/*'
-  name: reports/$CODEBUILD_BUILD_NUMBER
+  name: artifacts/$CODEBUILD_BUILD_NUMBER
