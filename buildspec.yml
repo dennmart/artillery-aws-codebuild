@@ -4,9 +4,15 @@ phases:
   install:
     commands:
       - npm install -g artillery@latest
+  pre_build:
+    commands:
+      - mkdir reports
   build:
     commands:
-      - artillery run tests/performance/socket-io.yml
+      - artillery run --output reports/report.json tests/performance/socket-io.yml
+  post_build:
+    commands:
+      - artillery report --output reports/report.html reports/report.json
 
 artifacts:
   files:
